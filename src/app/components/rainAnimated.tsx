@@ -226,8 +226,8 @@ export default function ColorfulRainCountdown() {
       )}
 
       {showBook && (
-        <div className='flex flex-col gap-8 text-wrap'>
-          <div className='w-[450px] bg-white text-black flex items-center p-2 rounded'>
+        <div className='flex flex-col gap-8 text-wrap rounded'>
+          <div className='w-[480px] bg-white text-black flex items-center p-2 rounded'>
             {/* Bên trái: text */}
             <div className='pr-1'>
               <p className='text-[11px] leading-snug whitespace-normal'>
@@ -249,7 +249,7 @@ export default function ColorfulRainCountdown() {
           <HTMLFlipBook
             width={240}
             height={240}
-            className={"w-32 h-32"}
+            className={"w-32 h-32 rounded"}
             style={{}}
             startPage={0}
             size={"fixed"}
