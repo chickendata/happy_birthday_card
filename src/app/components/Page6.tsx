@@ -7,9 +7,9 @@ import Image from 'next/image';
 
 const photos = [
   { src: img1, caption: 'Kỷ niệm vui vẻ', rotate: '-rotate-6', top: 'top-6', left: 'left-4' },
-  { src: img2, caption: 'Chuyến đi Đà Lạt', rotate: 'rotate-3', top: 'top-34', left: 'left-30' },
-  { src: img3, caption: 'Bữa tiệc sinh nhật', rotate: '-rotate-2', top: 'top-36', left: 'left-8' },
-  { src: img4, caption: 'Thời học sinh', rotate: 'rotate-6', top: 'top-3', left: 'left-36' },
+  { src: img2, caption: 'Lúc hạnh phúc nhất', rotate: 'rotate-3', top: 'top-34', left: 'left-30' },
+  { src: img3, caption: 'Mới gặp em', rotate: '-rotate-2', top: 'top-36', left: 'left-8' },
+  { src: img4, caption: 'Nàng thơ của anh', rotate: 'rotate-6', top: 'top-3', left: 'left-36' },
 ];
 
 export default function Page6() {
