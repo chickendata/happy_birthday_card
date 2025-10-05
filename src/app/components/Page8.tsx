@@ -18,7 +18,7 @@ export default function Page8() {
             cursorStyle='|'
             typeSpeed={40}
             deleteSpeed={30}
-            delaySpeed={5000}
+            delaySpeed={3500}
           />
         </p>
       </article>
