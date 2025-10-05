@@ -15,7 +15,6 @@ const photos = [
 export default function Page6() {
   return (
     <div className="relative w-full h-full bg-[#fffaf5] overflow-hidden">
-      {/* Họa tiết trang trí góc */}
       <div className="absolute top-2 left-2 text-xl animate-bounce">🌸</div>
       <div className="absolute top-2 right-2 text-xl animate-spin">⭐</div>
       <div className="absolute bottom-2 left-2 text-xl animate-pulse">🎀</div>

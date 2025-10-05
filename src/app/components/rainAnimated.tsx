@@ -11,6 +11,7 @@ import Page5 from "./Page5";
 import { Typewriter } from "react-simple-typewriter";
 import Page6 from "./Page6";
 import Page7 from "./Page7";
+import Page8 from "./Page8";
 
 interface HeartDrop {
   id: number;
@@ -40,7 +41,9 @@ export default function ColorfulRainCountdown() {
   const [stars, setStars] = useState<Star[]>([]);
   const [showGif, setShowGif] = useState(true);
   const [showBook, setShowBook] = useState(false);
+  const [isPage8, setIsPage8] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const bookRef = useRef<unknown>(null);
 
   const messages = ["HAPPY", "BIRTHDAY", "TO", "YOU"];
 
@@ -143,6 +146,13 @@ export default function ColorfulRainCountdown() {
     }
   }, [showStars]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const handleFlip = (e: any) => {
+    if (e.data === 7) {
+      setIsPage8(true);
+    }
+  };
+
   return (
     <div className='relative w-full h-screen bg-black overflow-hidden flex items-center justify-center'>
       {!started && (
@@ -235,13 +245,15 @@ export default function ColorfulRainCountdown() {
                   words={[
                     "Anh không cần một lý do để yêu em. Chỉ cần em là chính em.",
                     "Bên em, mọi khoảnh khắc đều trở nên ý nghĩa.",
+                    "Chỉ cần em mỉm cười, mọi thứ đều trở nên rạng rỡ.",
+                    "Cảm ơn em vì đã là điều dịu dàng nhất trong cuộc đời anh."
                   ]}
                   loop={1}
                   cursor
                   cursorStyle=''
                   typeSpeed={40}
                   deleteSpeed={20}
-                  delaySpeed={5000}
+                  delaySpeed={3000}
                 />
               </p>
             </div>
@@ -270,6 +282,8 @@ export default function ColorfulRainCountdown() {
             swipeDistance={50}
             showPageCorners={true}
             disableFlipByClick={false}
+            ref={bookRef}
+            onFlip={handleFlip}
           >
             <div className='page bg-[#f6bcd1]'>
               <Page1 />
@@ -292,6 +306,7 @@ export default function ColorfulRainCountdown() {
             <div className='page'>
               <Page7 />
             </div>
+            <div className='page'>{isPage8 && <Page8 />}</div>
           </HTMLFlipBook>
         </div>
       )}
